@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Mail, MessageSquare, MapPin, Send, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Mail, MessageSquare, MapPin, Send, Camera, MessagesSquare, BriefcaseBusiness } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -104,9 +104,9 @@ export default function ContactPage() {
               <h4 className="font-bold text-neutral-800 mb-4">Follow our journey</h4>
               <div className="flex gap-4">
                 {[
-                  { icon: Instagram, label: "Instagram" },
-                  { icon: Twitter, label: "Twitter" },
-                  { icon: Linkedin, label: "LinkedIn" }
+                  { icon: Camera, label: "Instagram" },
+                  { icon: MessagesSquare, label: "Twitter" },
+                  { icon: BriefcaseBusiness, label: "LinkedIn" }
                 ].map((social) => (
                   <button key={social.label} className="w-12 h-12 rounded-xl border border-neutral-100 flex items-center justify-center text-neutral-400 hover:text-rose-500 hover:border-rose-200 transition-all">
                     <social.icon className="w-5 h-5" />
