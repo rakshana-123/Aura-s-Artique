@@ -1,4 +1,4 @@
-﻿services:
+services:
   - type: web
     name: aura-backend
     runtime: docker
