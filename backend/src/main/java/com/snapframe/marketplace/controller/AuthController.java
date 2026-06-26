@@ -65,8 +65,8 @@ public class AuthController {
         }
 
         User user = userOpt.get();
-        if (!passwordEncoder.compare(password, user.getPassword())) {
-            return ResponseEntity.status(410).body(Map.of("message", "Invalid username or password."));
+        if (!passwordEncoder.matches(password, user.getPassword())) {
+            return ResponseEntity.status(401).body(Map.of("message", "Invalid username or password."));
         }
 
         String token = jwtUtil.generateToken(user.getUsername());
